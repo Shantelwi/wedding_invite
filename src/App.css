@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+
+.nav-link:visited,
+.nav-link:hover,
+.nav-link:focus {
+  text-decoration: underline;
+}
+
+.background-image {
+  background-image:url('https://png.pngtree.com/png-clipart/20230413/original/pngtree-elegant-simple-square-hand-drawn-floral-border-png-image_9052915.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height:100vh;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  /* Styles for small screens */
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Styles for medium-sized screens */
+}
+
+@media (min-width: 1025px) {
+  /* Styles for large screens */
+}
