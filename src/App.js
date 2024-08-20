@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './components/Home';
 import RSVPForm from './components/RSVPForm';
 import Location from './components/Location';
-import GiftRegistry from './components/GiftRegistry';
+import FAQ from './components/FAQs';
 import './App.css';
 
 
@@ -22,7 +22,7 @@ function App() {
             <Link to="/location" className='nav-link text-2xl'>Location</Link>
           </div>
           <div>
-            <Link to="/giftregistry" className='nav-link text-2xl'>Gift Registry</Link>
+            <Link to="/faq" className='nav-link text-2xl'>FAQ's</Link>
           </div>
         </nav>
       </div>
@@ -31,7 +31,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/rsvp' element={<RSVPForm />} />
         <Route path='/location' element={<Location />} />
-        <Route path='/giftregistry' element={<GiftRegistry />} />
+        <Route path='/faq' element={<FAQ />} />
       </Routes>
     </Router>
   );

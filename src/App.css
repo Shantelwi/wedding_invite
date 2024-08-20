@@ -8,13 +8,13 @@
   text-decoration: underline;
 }
 
-.background-image {
+/* .background-image {
   background-image:url('https://png.pngtree.com/png-clipart/20230413/original/pngtree-elegant-simple-square-hand-drawn-floral-border-png-image_9052915.png');
   background-size: contain;
   background-repeat: no-repeat;
   min-height:100vh;
   background-position: center;
-}
+} */
 
 @media (max-width: 768px) {
   /* Styles for small screens */

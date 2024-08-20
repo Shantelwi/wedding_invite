@@ -48,13 +48,13 @@ function RSVPForm() {
         }
     };
     return (
-        <div className="p-4 background-image">
-            <div className="mb-4">
+        <div>
+            <div>
                 <h1 className="text-3xl font-bold mb-4 flex justify-center text-center">~ RSVP ~</h1>
-                <p className="text-gray-600 text-2xl mb-8 flex justify-center text-center">Hope to see you there!</p>
+                <p className="text-gray-600 text-2xl mb-8 flex justify-center text-center">Please RSVP! Hope to see you there!</p>
             </div>
 
-            <div className="flex justify-center items-center h-screen p-4">
+            <div className="flex justify-center h-screen p-4">
                 <form onSubmit={handleSubmit} className="w-full max-w-lg ">
                     <div className="mb-4 flex">
                         <div className="mr-2 w-1/2">
@@ -113,7 +113,7 @@ function RSVPForm() {
                         {isBringingPlusOne && (
                             <div className="ml-2 w-1/2">
                                 <label className="block text-gray-700 text-md font-bold mb-2" htmlFor="guestName">
-                                    Plus One :
+                                    Guests Name(s) :
                                 </label>
                                 <input
                                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
