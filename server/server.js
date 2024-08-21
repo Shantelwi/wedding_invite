@@ -10,7 +10,7 @@ const helmetCsp = require('helmet-csp');
 const winston = require('winston');
 
 const homeRoutes = require('./routes/home');
-const giftRegistryRoutes = require('./routes/giftregistry');
+const faqRoutes = require('./routes/faq');
 const locationRoutes = require('./routes/location');
 
 const app = express();
@@ -107,9 +107,9 @@ app.post('/api/rsvp', validate, async (req, res) => {
 
         const mailOptions = {
             from: process.env.EMAIL_USER,
-            to: 'williamsshantel73@gmail.com',
+            to: 'williamsshantel73@gmail.com && rebecagonzalez0913@gmail.com',
             subject: 'New RSVP Submission',
-            text: `New RSVP Submission:\n\nName: ${first_name} ${last_name}\nEmail: ${email}\nAttending: ${attending ? 'Yes' : 'No'}\nGuest Name: ${guestName || 'N/A'}`,
+            text: `New Wedding RSVP Submission:\n\nName: ${first_name} ${last_name}\nEmail: ${email}\nAttending: ${attending ? 'Yes' : 'No'}\nGuest Name: ${guestName || 'N/A'}`,
         };
 
         console.log('Mail Options:', mailOptions);
@@ -134,7 +134,7 @@ app.post('/api/rsvp', validate, async (req, res) => {
 });
 
 app.use('/', homeRoutes);
-app.use('/giftregistry', giftRegistryRoutes);
+app.use('/faq', faqRoutes);
 app.use('/location', locationRoutes);
 
 const server = app.listen(PORT, () => {

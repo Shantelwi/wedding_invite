@@ -4,7 +4,6 @@ import Footer from '../components/Footer';
 function RSVPForm() {
     const [first_name, setFirst_name] = useState('');
     const [last_name, setLast_name] = useState('');
-    const [isBringingPlusOne, setIsBringingPlusOne] = useState(false);
     const [email, setEmail] = useState('');
     const [attending,setAttending] = useState(false);
     const [guestName,setGuestName] = useState('');
@@ -13,8 +12,6 @@ function RSVPForm() {
     const handleAttendingChange = (e) => {
         const isAttending = e.target.value === 'true';
         setAttending(isAttending);
-
-        setIsBringingPlusOne(isAttending);
     }
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -34,6 +31,7 @@ function RSVPForm() {
             });
             
             if(!response.ok){
+                // eslint-disable-next-line no-template-curly-in-string
                 throw new Error('HTTP error! Status: ${response.status}');
             }
             await new Promise(resolve => setTimeout(resolve, 1000));
@@ -48,32 +46,35 @@ function RSVPForm() {
         }
     };
     return (
-        <div>
-            <div>
+        <div style={{ backgroundColor: '#566c56'}}>
+            <div className="flex justify-center mb-4">
+                <img src="/images/portland-photographer-cannon-beach-3.jpg" alt="weddingImage" className="w-full h-1/2 object-cover" />
+            </div>
+            <div style={{ color: '#ffffff' }}>
                 <h1 className="text-3xl font-bold mb-4 flex justify-center text-center">~ RSVP ~</h1>
-                <p className="text-gray-600 text-2xl mb-8 flex justify-center text-center">Please RSVP! Hope to see you there!</p>
+                <p className="text-2xl mb-8 flex justify-center text-center">We ask that you please RSVP by **enter deadline**</p>
             </div>
 
             <div className="flex justify-center h-screen p-4">
                 <form onSubmit={handleSubmit} className="w-full max-w-lg ">
                     <div className="mb-4 flex">
                         <div className="mr-2 w-1/2">
-                            <label htmlFor="first_name" className="block text-gray-600 font-semibold mb-2">First name :</label>
+                            <label htmlFor="first_name" className="block font-semibold mb-2 text-white">First name :</label>
                             <input
                                 type="text"
                                 id="name"
-                                className="w-full py-2 px-3 border rounded-md leading-tight focus:outline-none focus:shadow-outline"
+                                className="w-full py-2 px-3 border rounded-md leading-tight focus:outline-none focus:shadow-outline text-black bg-white"
                                 value={first_name}
                                 onChange={(e) => setFirst_name(e.target.value)}
                                 required
                             />
                         </div>
                         <div className="ml-2 w-1/2">
-                            <label htmlFor="last_name" className="block text-gray-600 font-semibold mb-2">Last Name :</label>
+                            <label htmlFor="last_name" className="block font-semibold mb-2 text-white">Last Name :</label>
                             <input
                                 type="text"
                                 id="name"
-                                className="w-full py-2 px-3 border rounded-md leading-tight focus:outline-none focus:shadow-outline"
+                                className="w-full py-2 px-3 border rounded-md leading-tight focus:outline-none focus:shadow-outline text-black bg-white"
                                 value={last_name}
                                 onChange={(e) => setLast_name(e.target.value)}
                                 required
@@ -83,11 +84,11 @@ function RSVPForm() {
 
 
                     <div className="mb-4">
-                        <label htmlFor="email" className="block text-gray-600 font-semibold mb-2">Email :</label>
+                        <label htmlFor="email" className="block font-semibold mb-2 text-white">Email :</label>
                         <input
                             type="email"
                             id="email"
-                            className="w-full py-2 px-3 border rounded-md leading-tight focus:outline-none focus:shadow-outline"
+                            className="w-full py-2 px-3 border rounded-md leading-tight focus:outline-none focus:shadow-outline text-black bg-white"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
@@ -95,34 +96,33 @@ function RSVPForm() {
                     </div>
                     <div className="mb-4 flex">
                         <div className="mr-2 w-1/2">
-                            <label htmlFor="attending" className="block text-gray-600 font-semibold mb-2"> Will you be attending? :</label>
+                            <label htmlFor="attending" className="block font-semibold mb-2 text-white"> Will you be attending? :</label>
                             <select
                                 id="attending"
-                                className="w-full py-2 px-3 border rounded-md leading-tight focus:outline-none focus:shadow-outline"
+                                className="w-full py-2 px-3 border rounded-md leading-tight focus:outline-none focus:shadow-outline text-black bg-white"
                                 onChange={handleAttendingChange}
                                 required
+                                style={{color: 'slategray'}}
                             >
                                 <option value="">
                                     Select an option
                                 </option>
-                                <option value="true">Yes, I will be there!</option>
-                                <option value="false">No, I can't make it.</option>
+                                <option value="true">Joyfully Accept!</option>
+                                <option value="false">Respectfully Decline.</option>
                             </select>
                         </div>
 
-                        {isBringingPlusOne && (
-                            <div className="ml-2 w-1/2">
-                                <label className="block text-gray-700 text-md font-bold mb-2" htmlFor="guestName">
-                                    Guests Name(s) :
-                                </label>
-                                <input
-                                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    id="guestName"
-                                    type="text"
-                                    placeholder="Guest's Name"
-                                />
-                            </div>
-                        )}
+                    </div>
+                    <div className="mb-4">
+                        <label htmlFor="guestName" className="block font-semibold mb-2 text-white">Guest Name(s):</label>
+                        <input
+                            type="text"
+                            id="guestName"
+                            className="w-1/2 py-2 px-3 border rounded-md leading-tight focus:outline-none focus:shadow-outline text-black bg-white"
+                            value={guestName}
+                            onChange={(e) => setGuestName(e.target.value)}
+                            required
+                        />
                     </div>
 
                     <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-md">{submitted ? "Submitted" : "Submit RSVP"}</button>

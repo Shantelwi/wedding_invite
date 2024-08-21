@@ -1,10 +1,19 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
 
 @layer components {
   .text-cursive {
-    font-family: 'Dancing Script', cursive;
+    /* font-family: 'Yaquote Script', cursive; */
+  }
+
+body {
+    margin: 0;
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: italic;
   }
 
   .carousel-wrapper {
@@ -28,13 +37,7 @@
     text-align: center;
   }
 }
-
-body {
-  margin: 0;
-  font-family: 'Dancing Script',cursive;
-}
-
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */

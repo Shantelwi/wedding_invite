@@ -34,12 +34,12 @@ function Home() {
             </Slider>
             <div className='overlay'>
                 <div className='content text-gray'>
-                    <h1 className='text-6xl text-gray font-bold mb-4'>Rebeca & Shantel</h1>
-                    <p className='text-white-600 text-2xl mb-8'>
+                    <h1 className='text-8xl text-gray mb-4'>Rebeca & Shantel</h1>
+                    <p className='text-white-600 text-5xl mb-8'>
                         We're Getting Married!
                     </p>
-                    <p className='text-white-600 text-2xl'>
-                        Save the Week: <strong>05/09/26 - 05/13/26</strong>
+                    <p className='text-white-600 text-4xl'>
+                        Save the Date: May 9th,2026
                     </p>
                 </div>
             </div>

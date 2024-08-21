@@ -19,7 +19,7 @@ function App() {
             <Link to="/rsvp" className='nav-link text-2xl'>RSVP</Link>
           </div>
           <div>
-            <Link to="/location" className='nav-link text-2xl'>Location</Link>
+            <Link to="/location" className='nav-link text-2xl'>Travel</Link>
           </div>
           <div>
             <Link to="/faq" className='nav-link text-2xl'>FAQ's</Link>
