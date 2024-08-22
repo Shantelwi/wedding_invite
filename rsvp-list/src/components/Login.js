@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import axios from 'axios';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventdefault();
         try {
             const response = await axios.post('http://localhost:3001/api/login', {email, password});
             localStorage.setItem('token', response.data.token);
-            history.push('/rsvp-list');
+            navigate('/rsvp-list');
         } catch (error) {
             console.error('Login failed:', error);
             alert('Login failed.Please check your credentials.')

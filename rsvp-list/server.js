@@ -10,14 +10,9 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-// mongoose.connect('mongodb://localhost:3001/rsvp', { 
-//     // useNewUrlParser: true,
-//     // useUnifiedTopology: true 
-// });
-
 const connectDB = async () => {
     try {
-        await mongoose.connect('mongodb://127.0.0.1:3001/rsvp');
+        await mongoose.connect('mongodb://localhost:27017/rsvp');
         console.log('MongoDB connected successfully');
     } catch (error) {
         console.error('MongoDB connection error:', error);
@@ -36,19 +31,17 @@ const hardcodedUserEmail = process.env.EMAIL_USER;
 
 const hardcodedUserPassword = process.env.USER_PASSWORD;
 
-let hardcodedUserPasswordHash;
-
-bcrypt.hash(hardcodedUserPassword,10,(err, hash) => {
+bcrypt.hash(hardcodedUserPassword,10, async (err, hash) => {
     if (err) throw err;
-    hardcodedUserPasswordHash = hash;
-    console.log('Hashed password:', hardcodedUserPasswordHash);
+
+    const hardcodedUser = {
+        email: hardcodedUserEmail,
+        password: hash
+    };
+    await User.create(hardcodedUser);
+    console.log('Hardcoded user created:', hardcodedUser);
+    
 });
-
-const hardcodedUser = {
-    email: hardcodedUserEmail,
-    password: hardcodedUserPasswordHash
-};
-
 
 const rsvpSchema = new mongoose.Schema({
     firstName: String,
@@ -78,16 +71,22 @@ app.get('/api/rsvps', authenticate, async (req, res) => {
 app.post('/api/login', async (req, res) => {
     const { email, password } = req.body;
 
-    if (email !== hardcodedUser.email) {
+    console.log('Incoming Email:', email);
+    console.log('Incoming Password:', password);
+
+    const user = await User.findOne({ email });
+    if (!user) {
+        console.log('Email does not match');
         return res.status(401).send('Invalid credentials');
     }
 
-    const isMatch = await bcrypt.compare(password, hardcodedUser.password);
+    const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-        return res.status(401).send('Invalid credentials');
+        console.log('Password does not match');
+        return res.status(401).send('Invalid Credentials');
     }
 
-    const token = jwt.sign({ email: hardcodedUser.email }, process.env.JWT_SECRET, { expiresIn: '1h' });
+    const token = jwt.sign({ email: user.email }, process.env.JWT_SECRET, { expiresIn: '1h' });
     res.json({ token });
 });
 
