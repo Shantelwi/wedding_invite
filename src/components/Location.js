@@ -5,7 +5,7 @@ function Location() {
     return (
         <div>
             <div className="flex justify-center mb-4">
-                <img src="/images/portland-photographer-cannon-beach-14-1024x682.jpg" alt="weddingImage" className="w-full h-1/2 object-cover" />
+                <img src="images/R+S-154.jpg" alt="weddingImage" className="w-full h-1/2 object-cover" />
             </div>
             <div className="mb-4">
                 <h1 className="text-3xl font-bold mb-4 flex justify-center text-center">~ Travel Info ~</h1>

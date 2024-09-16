@@ -46,20 +46,20 @@ function RSVPForm() {
         }
     };
     return (
-        <div style={{ backgroundColor: '#566c56'}}>
+        <div>
             <div className="flex justify-center mb-4">
-                <img src="/images/portland-photographer-cannon-beach-3.jpg" alt="weddingImage" className="w-full h-1/2 object-cover" />
+                <img src="images/R+S-037.jpg" alt="weddingImage" className="w-full h-1/4 object-cover" />
             </div>
             <div style={{ color: '#ffffff' }}>
-                <h1 className="text-3xl font-bold mb-4 flex justify-center text-center">~ RSVP ~</h1>
-                <p className="text-2xl mb-8 flex justify-center text-center">We ask that you please RSVP by **enter deadline**</p>
+                <h1 className="text-3xl font-bold mb-4 flex justify-center text-black">~ RSVP ~</h1>
+                <p className="text-2xl mb-8 flex justify-center text-black">We ask that you please RSVP by **enter deadline**</p>
             </div>
 
             <div className="flex justify-center h-screen p-4">
                 <form onSubmit={handleSubmit} className="w-full max-w-lg ">
                     <div className="mb-4 flex">
                         <div className="mr-2 w-1/2">
-                            <label htmlFor="first_name" className="block font-semibold mb-2 text-white">First name :</label>
+                            <label htmlFor="first_name" className="block font-semibold mb-2 text-black">First name :</label>
                             <input
                                 type="text"
                                 id="name"
@@ -70,7 +70,7 @@ function RSVPForm() {
                             />
                         </div>
                         <div className="ml-2 w-1/2">
-                            <label htmlFor="last_name" className="block font-semibold mb-2 text-white">Last Name :</label>
+                            <label htmlFor="last_name" className="block font-semibold mb-2 text-black">Last Name :</label>
                             <input
                                 type="text"
                                 id="name"
@@ -84,7 +84,7 @@ function RSVPForm() {
 
 
                     <div className="mb-4">
-                        <label htmlFor="email" className="block font-semibold mb-2 text-white">Email :</label>
+                        <label htmlFor="email" className="block font-semibold mb-2 text-black">Email :</label>
                         <input
                             type="email"
                             id="email"
@@ -96,7 +96,7 @@ function RSVPForm() {
                     </div>
                     <div className="mb-4 flex">
                         <div className="mr-2 w-1/2">
-                            <label htmlFor="attending" className="block font-semibold mb-2 text-white"> Will you be attending? :</label>
+                            <label htmlFor="attending" className="block font-semibold mb-2 text-black"> Will you be attending? :</label>
                             <select
                                 id="attending"
                                 className="w-full py-2 px-3 border rounded-md leading-tight focus:outline-none focus:shadow-outline text-black bg-white"
@@ -131,6 +131,7 @@ function RSVPForm() {
             <Footer/>
         </div>
     );
+    
 };
 
 export default RSVPForm;

@@ -58,7 +58,7 @@ function FAQ() {
     return (
         <div>
             <div className="flex justify-center mb-4">
-                <img src="/images/portland-photographer-cannon-beach-26-1024x682.jpg" alt="weddingImage" className="w-full h-1/2 object-cover" />
+                <img src="images/R+S_bw-29.jpg" alt="weddingImage" className="w-full h-1/2 object-cover" />
             </div>
             <h1 style={{ fontSize: "30px", textAlign: "center" }}>
                 {" "}
