@@ -13,7 +13,7 @@ function Home() {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 5000
+        autoplaySpeed: 3000
     };
 
     const images = [
@@ -73,32 +73,7 @@ function Home() {
     }, []);
 
     return (
-        // <div className="carousel-wrapper">
-        //     <Slider {...carouselSettings} className='h-full'>
-        //         {images.map((imageUrl, index) => (
-        //             <div key={index} className='h-full'>
-        //                 <img src={imageUrl} alt={`Carousel ${index + 1}`} className='object-contain h-full w-auto' />
-        //             </div>
-        //         ))}
-        //     </Slider>
-        //     <div className='overlay'>
-        //         <div className='content text-gray'>
-        //             <h1 className='text-8xl text-gray '>Rebeca & Shantel</h1>
-        //             <p className='text-white-600 text-5xl '>
-        //                 We're Getting Married!
-        //             </p>
-        //             <p className='text-white-600 text-4xl'>
-        //                 Save the Date: May 9th,2026
-        //             </p>
-        //             <div className="countdown text-white-600 text-6xl ">
-        //                 <p>{countdown.years} : {countdown.months} : {countdown.days} : {countdown.hours} : {countdown.minutes} : {countdown.seconds} </p>
-        //             </div>
-        //         </div>
-        //     </div>
-
-        // </div>
-
-        <div className="carousel-wrapper" style={{ position: 'relative', height: '100vh', backgroundColor: 'white' }}>
+        <div className="carousel-wrapper">
             {/* Text Content at the Top */}
             <div className='text-center p-4 text-black'>
                 <h1 className='text-7xl mb-4'>Rebeca & Shantel</h1>
@@ -112,25 +87,18 @@ function Home() {
             </div>
 
             {/* Carousel Slider */}
-            <Slider {...carouselSettings} className='h-[calc(100vh-100px)] flex items-center justify-center'>
+            <Slider {...carouselSettings} className='slick-slider'>
                 {images.map((imageUrl, index) => (
-                    <div key={index} className='flex justify-center items-center w-full h-full' >
+                    <div key={index} className='image-container'>
                         <img
                             src={imageUrl}
                             alt={`Carousel ${index + 1}`}
-                            className='object-cover w-full h-full'
-                            style={{ maxHeight: '100%', maxWidth: '100%' }} 
                         />
                     </div>
                 ))}
             </Slider>
-
-            {/* Footer */}
             <Footer />
         </div>
-
-
-
     );
 };
 

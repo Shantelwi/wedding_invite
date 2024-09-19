@@ -48,7 +48,7 @@ function RSVPForm() {
     return (
         <div>
             <div className="flex justify-center mb-4">
-                <img src="images/R+S-037.jpg" alt="weddingImage" className="w-full h-1/4 object-cover" />
+                <img className='link-images'  src="images/R+S-037.jpg" alt="weddingImage" />
             </div>
             <div style={{ color: '#ffffff' }}>
                 <h1 className="text-3xl font-bold mb-4 flex justify-center text-black">~ RSVP ~</h1>
@@ -114,7 +114,7 @@ function RSVPForm() {
 
                     </div>
                     <div className="mb-4">
-                        <label htmlFor="guestName" className="block font-semibold mb-2 text-white">Guest Name(s):</label>
+                        <label htmlFor="guestName" className="block font-semibold mb-2">Guest Name(s):</label>
                         <input
                             type="text"
                             id="guestName"
