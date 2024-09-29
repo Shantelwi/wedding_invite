@@ -55,7 +55,7 @@ function RSVPForm() {
                 <p className="text-2xl mb-8 flex justify-center text-black">We ask that you please RSVP by **enter deadline**</p>
             </div>
 
-            <div className="flex justify-center h-screen p-4">
+            <div className="flex justify-center p-4">
                 <form onSubmit={handleSubmit} className="w-full max-w-lg ">
                     <div className="mb-4 flex">
                         <div className="mr-2 w-1/2">

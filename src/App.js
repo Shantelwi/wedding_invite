@@ -5,6 +5,7 @@ import RSVPForm from './components/RSVPForm';
 import Location from './components/Location';
 import FAQ from './components/FAQs';
 import './App.css';
+import './index.css';
 
 
 function App() {

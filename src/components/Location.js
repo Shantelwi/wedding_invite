@@ -24,11 +24,18 @@ function Location() {
                         <h1 className="text-gray-600 text-2xl mb-2">Booking</h1>
                         <p className="text-gray-600 text-2xl mb-2 mt-10">
                             Book with our travel agent.
-                            Click the link below.
+                            Click the links below.
                         </p>
-                        <button type="submit" className="bg-green-500 hover:bg-blue-700 text-white py-2 px-4 rounded-md">
-                            <a href="mailto:bonitastewart1@gmail.com">
-                                Book Now</a>
+                        <button type="submit" className="bg-green-500 hover:bg-blue-700 text-white py-2 px-4 rounded-md mx-4">
+                            <a href="mailto:bonitastewart1@yahoo.com">
+                                Contact
+                            </a>
+                        </button>
+                        
+                        <button type="submit" className="bg-green-500 hover:bg-blue-700 text-white py-2 px-4 rounded-md mb-6">
+                            <a href="https://traveljoy.com/bookings/Z1xZW3q8x241gvQR72D6nGSq">
+                                Book Now
+                            </a>
                         </button>
                     </div>
                 </div>
