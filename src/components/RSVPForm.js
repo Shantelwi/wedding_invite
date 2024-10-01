@@ -52,7 +52,7 @@ function RSVPForm() {
             </div>
             <div style={{ color: '#ffffff' }}>
                 <h1 className="text-3xl font-bold mb-4 flex justify-center text-black">~ RSVP ~</h1>
-                <p className="text-2xl mb-8 flex justify-center text-black">We ask that you please RSVP by **enter deadline**</p>
+                <p className="text-2xl mb-8 flex justify-center text-black">We ask that you please RSVP by Jan. 15th, 2026</p>
             </div>
 
             <div className="flex justify-center p-4">

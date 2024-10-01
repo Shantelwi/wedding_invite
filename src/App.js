@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './components/Home';
 import RSVPForm from './components/RSVPForm';
 import Location from './components/Location';
+import About from './components/AboutUs'
 import FAQ from './components/FAQs';
 import './App.css';
 import './index.css';
@@ -23,6 +24,9 @@ function App() {
             <Link to="/location" className='nav-link text-2xl'>Travel</Link>
           </div>
           <div>
+            <Link to="/about" className='nav-link text-2xl'>About Us</Link>
+          </div>
+          <div>
             <Link to="/faq" className='nav-link text-2xl'>FAQ's</Link>
           </div>
         </nav>
@@ -32,6 +36,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/rsvp' element={<RSVPForm />} />
         <Route path='/location' element={<Location />} />
+        <Route path='/about' element={<About />} />
         <Route path='/faq' element={<FAQ />} />
       </Routes>
     </Router>
