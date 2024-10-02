@@ -24,7 +24,7 @@ function App() {
             <Link to="/location" className='nav-link text-2xl'>Travel</Link>
           </div>
           <div>
-            <Link to="/about" className='nav-link text-2xl'>About Us</Link>
+            <Link to="/about" className='nav-link text-2xl'>Our Story</Link>
           </div>
           <div>
             <Link to="/faq" className='nav-link text-2xl'>FAQ's</Link>

@@ -58,6 +58,100 @@ body {
   overflow: hidden;
 }
 
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  padding: 20px;
+  list-style: none;
+}
+
+.timeline-item {
+  margin: 20px 0;
+  position: relative;
+  width: 50%; /* Default width for larger screens */
+}
+
+.timeline-item.left {
+  left: 0; /* Align left */
+  padding-right: 30px;
+}
+
+.timeline-item.right {
+  left: 50%; /* Align right */
+  padding-left: 30px; /* Space for right items */
+}
+
+.timeline-content {
+  position: relative; /* Position relative for dot positioning */
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  position: absolute; /* Position the dots absolutely */
+  left: calc(104% - 15px); /* Position left dot */
+  transform: translateY(-50%); /* Center vertically */
+  margin-top: 50px;
+}
+
+.timeline-item.right .timeline-dot {
+  left: calc(-4% + 5px); /* Position right dot */
+}
+
+.timeline-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%; /* Center the line */
+  top: 0;
+  height: 100%;
+  width: 2px; /* Width of the line */
+  background: #ccc; /* Color of the line */
+  transform: translateX(-50%); /* Center the line */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .timeline-item {
+    width: 100%; /* Full width on smaller screens */
+    left: 0; /* Align all items to the left */
+    padding-right: 0; /* Remove padding */
+    padding-left: 0; /* Remove padding */
+  }
+
+  .timeline-item.right {
+    left: 0; /* Align right items to the left */
+  }
+
+  .timeline-dot {
+    left: -15px; /* Adjust dot position for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-content {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .timeline-dot {
+    width: 8px; /* Smaller dots on very small screens */
+    height: 8px;
+  }
+}
+
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   body {

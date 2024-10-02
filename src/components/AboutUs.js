@@ -7,39 +7,109 @@ function About() {
             <div className="flex justify-center mb-4">
                 <img className="link-images" src="images/R+S-040.jpg" alt="weddingImage" />
             </div>
-            {/* <div className="mb-4">
-                <h1 className="text-3xl font-bold mb-4 flex justify-center text-center">~ Travel Info ~</h1>
-                <div className="flex justify-center text-center">
-                    <div className="w-1/2 p-4">
-                        <h1 className="text-gray-600 text-2xl mb-2">Hotel</h1>
-                        <p className="text-gray-600 text-2xl mb-2 mt-10">
-                            The Grand Palladium Costa Mujeres Resort & Spa
-                        </p>
-                        <button type="submit" className="bg-green-500 hover:bg-blue-700 text-white py-2 px-4 rounded-md">
-                            <a href="https://www.palladiumhotelgroup.com/en/hoteles/mexico/costamujerescancun/grand-palladium-costa-mujeres-resort-spa?partner=3369&gclid=0dc1d92b1e02191f862ebfee4961108d&gclsrc=3p.ds&msclkid=0dc1d92b1e02191f862ebfee4961108d&utm_source=bing&utm_medium=cpc&utm_campaign=BING_ECOMMERCE_USA_EN_USD_ALL_GRAND%20PALLADIUM_HOT_ALL_ALL&utm_term=grand%20palladium%20costa%20mujeres%20resort&utm_content=USA_EN_USD_MX_GRAND%20PALLADIUM_HOT_GP%20COSTA%20MUJERES%20RESORT%20%26%20SPA_CANCUN">
-                                View the Resort</a>
-                        </button>
-                    </div>
-                    <div className="w-1/2 p-4">
-                        <h1 className="text-gray-600 text-2xl mb-2">Booking</h1>
-                        <p className="text-gray-600 text-2xl mb-2 mt-10">
-                            Book with our travel agent.
-                            Click the links below.
-                        </p>
-                        <button type="submit" className="bg-green-500 hover:bg-blue-700 text-white py-2 px-4 rounded-md mx-4">
-                            <a href="mailto:bonitastewart1@yahoo.com">
-                                Contact
-                            </a>
-                        </button>
-                        
-                        <button type="submit" className="bg-green-500 hover:bg-blue-700 text-white py-2 px-4 rounded-md mb-6">
-                            <a href="https://traveljoy.com/bookings/Z1xZW3q8x241gvQR72D6nGSq">
-                                Book Now
-                            </a>
-                        </button>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">2014</div>
+                        <img src="path/to/image-2014.jpg" alt="Event in 2014" class="timeline-image"/>
+                            <h3>Event Title 2014</h3>
+                            <p>Description of the event that occurred in 2014...</p>
                     </div>
                 </div>
-            </div> */}
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">2015</div>
+                        <img src="path/to/image-2015.jpg" alt="Event in 2015" class="timeline-image"/>
+                            <h3>Event Title 2015</h3>
+                            <p>Description of the event that occurred in 2015...</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">2016</div>
+                        <img src="path/to/image-2016.jpg" alt="Event in 2016" class="timeline-image"/>
+                            <h3>Event Title 2016</h3>
+                            <p>Description of the event that occurred in 2016...</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">2017</div>
+                        <img src="path/to/image-2017.jpg" alt="Event in 2017" class="timeline-image"/>
+                            <h3>Event Title 2017</h3>
+                            <p>Description of the event that occurred in 2017...</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">2018</div>
+                        <img src="path/to/image-2018.jpg" alt="Event in 2018" class="timeline-image"/>
+                            <h3>Event Title 2018</h3>
+                            <p>Description of the event that occurred in 2018...</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">2019</div>
+                        <img src="path/to/image-2019.jpg" alt="Event in 2019" class="timeline-image"/>
+                            <h3>Event Title 2019</h3>
+                            <p>Description of the event that occurred in 2019...</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">2020</div>
+                        <img src="path/to/image-2020.jpg" alt="Event in 2020" class="timeline-image"/>
+                            <h3>Event Title 2020</h3>
+                            <p>Description of the event that occurred in 2020...</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">2021</div>
+                        <img src="path/to/image-2021.jpg" alt="Event in 2021" class="timeline-image"/>
+                            <h3>Event Title 2021</h3>
+                            <p>Description of the event that occurred in 2021...</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">2022</div>
+                        <img src="path/to/image-2022.jpg" alt="Event in 2022" class="timeline-image"/>
+                            <h3>Event Title 2022</h3>
+                            <p>Description of the event that occurred in 2022...</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">2023</div>
+                        <img src="path/to/image-2023.jpg" alt="Event in 2023" class="timeline-image"/>
+                            <h3>Event Title 2023</h3>
+                            <p>Description of the event that occurred in 2023...</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">2024</div>
+                        <img src="path/to/image-2024.jpg" alt="Event in 2024" class="timeline-image"/>
+                            <h3>Event Title 2024</h3>
+                            <p>Description of the event that occurred in 2024...</p>
+                    </div>
+                </div>
+            </div>
+
+
             <Footer />
         </div>
     );
