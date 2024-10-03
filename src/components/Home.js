@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
-import Footer from '../components/Footer';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -75,7 +74,6 @@ const Home = () => {
                 <p className='text-5xl mb-4'>We're Getting Married!</p>
                 <p className='text-4xl'>Save the Date: May 9th, 2026</p>
             </div>
-
             <div className="countdown text-white-600 text-4xl text-center">
                 <p>{`${countdown.years} : ${countdown.months} : ${countdown.days} : ${countdown.hours} : ${countdown.minutes} : ${countdown.seconds}`}</p>
             </div>
@@ -87,8 +85,9 @@ const Home = () => {
                             src={imageUrl}
                             alt={`Carousel ${index + 1}`}
                             onError={(e) => {
-                                console.error(`Error loading image: ${imageUrl}`); 
-                                e.target.src = 'path/to/default/image.jpg'; }}
+                                console.error(`Error loading image: ${imageUrl}`);
+                                e.target.src = 'path/to/default/image.jpg';
+                            }}
                         />
                     </div>
                 ))}
