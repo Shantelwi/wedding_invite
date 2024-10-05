@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Footer from './Footer';
 
 const Home = () => {
     const carouselSettings = {
@@ -13,6 +14,7 @@ const Home = () => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
+        adaptiveHeight: true
     };
 
     const images = [
@@ -70,12 +72,12 @@ const Home = () => {
     return (
         <div className="carousel-wrapper">
             <div className='text-center p-4 text-black'>
-                <h1 className='text-7xl mb-4'>Rebeca & Shantel</h1>
-                <p className='text-5xl mb-4'>We're Getting Married!</p>
-                <p className='text-4xl'>Save the Date: May 9th, 2026</p>
+                <h1 className=' title text-6xl mb-4'>Rebeca & Shantel</h1>
+                <p className='sub_title text-4xl mb-4'>We're Getting Married!</p>
+                <p className='sub_title text-3xl'>Save the Date: May 9th, 2026</p>
             </div>
-            <div className="countdown text-white-600 text-4xl text-center">
-                <p>{`${countdown.years} : ${countdown.months} : ${countdown.days} : ${countdown.hours} : ${countdown.minutes} : ${countdown.seconds}`}</p>
+            <div className="countdown text-4xl mb-4 text-center">
+                {`${countdown.years} : ${countdown.months} : ${countdown.days} : ${countdown.hours} : ${countdown.minutes} : ${countdown.seconds}`}
             </div>
 
             <Slider {...carouselSettings} className='slick-slider'>
