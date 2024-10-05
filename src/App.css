@@ -2,11 +2,14 @@
 body {
   margin: 0;
   padding: 20px;
-  /* background-color: #eee6e1;  */
 }
 
 .App {
   text-align: center;
+}
+
+nav {
+  background-color: white;
 }
 
 .navbar {
