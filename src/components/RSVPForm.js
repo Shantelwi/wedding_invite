@@ -56,7 +56,7 @@ function RSVPForm() {
             </div>
 
             <div className="flex justify-center p-4">
-                <form onSubmit={handleSubmit} className="w-full max-w-lg " netlify>
+                <form onSubmit={handleSubmit} className="w-full max-w-lg ">
                     <div className="mb-4 flex">
                         <div className="mr-2 w-1/2">
                             <label htmlFor="first_name" className="block font-semibold mb-2 text-black">First name :</label>
