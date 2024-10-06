@@ -16,7 +16,7 @@ function RSVPForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://localhost:8000/api/rsvp',{
+            const response = await fetch('http://localhost:8000/api/rsvp',{
                 method:'POST',
                 headers:{
                     'Content-Type': 'application/json',
