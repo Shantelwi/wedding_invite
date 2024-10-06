@@ -33,7 +33,7 @@ const logger = winston.createLogger({
 });
 
 app.use(cors({
-    origin:['http://localhost:3000', 'https://rsinvite.netlify.app'],
+    origin:'http://localhost:3000',
     methods:'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials:true,
     optionsSuccessStatus:204,
