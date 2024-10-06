@@ -16,7 +16,7 @@ function RSVPForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://rsinvite.netlify.app/api/rsvp',{
+            const response = await fetch('https://rsinvite.netlify.app/api/rsvp',{
                 method:'POST',
                 headers:{
                     'Content-Type': 'application/json',
