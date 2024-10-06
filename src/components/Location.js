@@ -26,13 +26,13 @@ function Location() {
                             Book with our travel agent.
                             Click the links below.
                         </p>
-                        <button type="submit" className="bg-green-500 hover:bg-blue-700 text-white py-2 px-4 rounded-md mx-4">
+                        <button type="submit" className=" submit_1 bg-green-500 hover:bg-blue-700 text-white py-2 px-4 rounded-md mx-4">
                             <a href="mailto:bonitastewart1@yahoo.com">
                                 Contact
                             </a>
                         </button>
                         
-                        <button type="submit" className="bg-green-500 hover:bg-blue-700 text-white py-2 px-4 rounded-md mb-6">
+                        <button type="submit" className=" submit_2 bg-green-500 hover:bg-blue-700 text-white py-2 px-4 rounded-md mb-6">
                             <a href="https://traveljoy.com/bookings/Z1xZW3q8x241gvQR72D6nGSq">
                                 Book Now
                             </a>

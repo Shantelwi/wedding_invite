@@ -89,7 +89,7 @@ function App() {
     <Router>
       <div className='relative'>
         <nav className='text-cursive p-5 flex justify-between items-center bg-white'>
-          <div className='logo text-2xl md:hidden'>R+S</div> {/* Logo only on small screens */}
+          <div className='logo text-2xl md:hidden'> <button> <a href="/">R+S</a> </button> </div> {/* Logo only on small screens */}
           <div className='hidden md:flex md:justify-center md:items-center w-full'>
             {/* Navigation links for desktop */}
             <div className='flex space-x-8'>

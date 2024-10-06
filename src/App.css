@@ -2,6 +2,7 @@
 body {
   margin: 0;
   padding: 20px;
+  background-color: #fbf9f7;
 }
 
 .App {
@@ -17,6 +18,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+}
+
+.nav-link {
+  padding: 15px 20px;
 }
 
 .flex {
@@ -176,7 +181,7 @@ nav {
 
   .link-images {
     margin-top: 25px;
-    width: 80%;
+    width: 100%;
     height: auto;
     object-fit: cover;
     overflow: hidden;
@@ -186,6 +191,18 @@ nav {
     text-align: center;
     font-size: 40px;
   }
+
+.submit_1 {
+  margin-bottom: 10px;
+}
+
+.a_p {
+  width: 105%;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+}
+
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -198,7 +215,7 @@ nav {
   }
 
   .slick-slider img {
-    max-width: 80%;
+    max-width: 90%;
   }
 
   .hidden {
@@ -216,25 +233,34 @@ nav {
 }
 
 @media (min-width: 1025px) {
-  h1 {
-    font-size: 2.5rem; /* Larger heading size for desktops */
+  .title {
+    font-size: 7rem; /* Larger heading size for desktops */
   }
 
-  p {
-    font-size: 1.1rem; /* Larger paragraph size for desktops */
+  .sub_title {
+    font-size: 3.5rem; /* Larger paragraph size for desktops */
+    padding: 10px;
   }
 
   .slick-slider img {
-    max-width: 70%;
+    max-width: 75%;
   }
   .hidden {
     display: flex;
   }
 
-  .nav-link {
-    margin: 0 20px;
-    padding: 10px 0;
+  .navbar {
+    flex-direction: column;
   }
+
+  .story_title {
+    font-size: 4rem;
+  }
+
+  .story {
+  font-size: 20px;
+}
+
 }
 
 @media (max-width: 480px) {
